@@ -34,6 +34,7 @@ class CadastroUsuario extends React.Component {
         }
         this.service.salvar(usuario)
             .then(response => {
+                this.props.history.push('/');
                 mensagemSucesso('Usuário cadastrado com sucesso! Faça login para acessar o sistema.');
             }).catch(error => {
                 mensagemErro(error.response.data);
@@ -41,7 +42,7 @@ class CadastroUsuario extends React.Component {
     }
 
     cancelar = () => {
-        this.props.history.push('/login');
+        this.props.history.push('/');
     }
 
     render() {

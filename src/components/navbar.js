@@ -6,7 +6,7 @@ function NavBar(props) {
     return (
         <div className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
             <div className="container">
-                <a href="#/login" className="navbar-brand">Minhas Finanças</a>
+                <a href="#/" className="navbar-brand">Minhas Finanças</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -15,7 +15,7 @@ function NavBar(props) {
                         <NavBarItem render={props.isUsuarioAutenticado} href="#/home" label="Home" />
                         <NavBarItem render={props.isUsuarioAutenticado} href="#/cadastrar-usuario" label="Usuários" />
                         <NavBarItem render={props.isUsuarioAutenticado} href="#/consulta-lancamento" label="Lançamentos" />
-                        <NavBarItem render={props.isUsuarioAutenticado} onClick={props.deslogar} href="#/login" label="Sair" />
+                        <NavBarItem render={props.isUsuarioAutenticado} onClick={props.deslogar} href="#/" label="Sair" />
                     </ul>
                 </div>
             </div>
