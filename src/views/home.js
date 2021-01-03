@@ -3,6 +3,7 @@ import React from 'react';
 import UsuarioService from '../app/service/usuarioService';
 import { mensagemErro } from '../components/toastr';
 import currencyFormatter from 'currency-formatter';
+import { withRouter } from "react-router-dom"
 import { AuthContext } from '../main/provedorAutenticacao';
 
 class Home extends React.Component {
@@ -47,4 +48,4 @@ class Home extends React.Component {
 
 Home.contextType = AuthContext
 
-export default Home;
+export default withRouter(Home);
